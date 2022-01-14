@@ -23,7 +23,7 @@ eval "$(starship init zsh)"
 	# Pacman & Yay
 	alias \
 		install='sudo pacman -S' \
-		remove='sudo pacman -R' \	
+		remove='sudo pacman -R' \
 	 	apps='sudo pacman -Qe' \
 	 	update='yay -Syu && yay -Sc' \
         clean='sudo pacman -Qdtq | sudo pacman -Rs -'
@@ -35,7 +35,7 @@ eval "$(starship init zsh)"
 	alias code='code .'
 
 	# Proton-VPN
-	alias \ 
+	alias \
 		connect='protonvpn-cli connect' \
 		disconnect='protonvpn-cli disconnect'
 
