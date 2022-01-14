@@ -15,6 +15,10 @@ export MICRO_TRUECOLOR=1
 # Starship
 eval "$(starship init zsh)"
 
+# llama
+alias ll='llama'
+export EDITOR=micro
+
 # Aliases
 
 	# Clear console
