@@ -1,49 +1,56 @@
+# Exec Sway
 [ "$(tty)" = "/dev/tty1" ] && exec sway
 
-export ZSH="/home/$USER/.oh-my-zsh"
-
+# Code Editor for Expo
 export REACT_EDITOR=code
 
+# oh-my-zsh
+export ZSH="/home/$USER/.oh-my-zsh"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
 source $ZSH/oh-my-zsh.sh
 
+# Micro
 export MICRO_TRUECOLOR=1
 
+# Starship
 eval "$(starship init zsh)"
 
-# ------- Alias ---------
+# Aliases
+
+	# Clear console
 	alias c='clear'
 
-	alias b='btop'
+	# Pacman & Yay
+	alias \
+		install='sudo pacman -S' \
+		remove='sudo pacman -R' \	
+	 	apps='sudo pacman -Qe' \
+	 	update='yay -Syu && yay -Sc' \
+        clean='sudo pacman -Qdtq | sudo pacman -Rs -'
 
-	alias update='yay -Syu && yay -Sc'
-
-	alias apps='sudo pacman -Qe'
-
-	alias remove='sudo pacman -R'
-
-	alias install='sudo pacman -S'
-	
+	# Mounting Google Drive
 	alias mount='rclone mount Ayush: ~/drive'
 
-	alias clean='sudo pacman -Qdtq | sudo pacman -Rs -'
-
+	# VS Code
 	alias code='code .'
 
-	alias n='neofetch'
+	# Proton-VPN
+	alias \ 
+		connect='protonvpn-cli connect' \
+		disconnect='protonvpn-cli disconnect'
 
-	alias connect='protonvpn-cli connect'
+	# Git
+	alias \
+		gpo='git push origin' \
+		gcm='git checkout main' \
+		grao='git remote add origin' \
+		gmnf='git merge --no-ff'
 
-	alias disconnect='protonvpn-cli disconnect'
+	# Sync Swayland changes with Git Repo
+    alias ss='cp -r .config/sway .config/waybar .config/alacritty .config/swaylock .config/mako .config/wofi GitHub/swayland'
 
-	alias gmnf='git merge --no-ff'
-
-    alias sws='cp -r .config/sway .config/waybar .config/alacritty .config/swaylock .config/mako .config/wofi GitHub/swayland'
-
+	# Network Manager
     alias \
         nmcon='nmcli device wifi connect' \
         nmls='nmcli device wifi list' \
         nmst='nmcli device status'
-
-    alias m='micro'    
