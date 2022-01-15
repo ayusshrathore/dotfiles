@@ -1,0 +1,13 @@
+7-zip-bin
+autotiling
+google-chrome
+nerd-fonts-jetbrains-mono
+pfetch
+protonvpn-cli
+python-proton-client
+python-protonvpn-nm-lib
+spicetify-cli
+spotify
+spotify-adblock
+ttf-font-logos
+visual-studio-code-bin
