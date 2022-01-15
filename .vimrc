@@ -45,15 +45,14 @@ inoremap <C-s> <ESC>:w<CR> " Save
 inoremap <C-q> <ESC>:q<CR> " Quit
 inoremap <C-p> <ESC>pi     " Paste
 inoremap <C-d> <ESC>ddi	   " Delete a line
-inoremap <C-v> <ESC>"+pa   " Paste
+inoremap <C-v> <ESC>"*p    " Paste
 
 " Visual Mode
 vnoremap <C-s> <ESC>:w<CR> " Save   
 vnoremap <C-q> <ESC>:q<CR> " Quit
-vnoremap <C-v> c<ESC>"+p   " Paste
+vnoremap <C-v> c<ESC>"*p   " Paste
 vnoremap x dd              " Delete a line
-vnoremap <C-c> "+yi		   " Copy
+vnoremap <C-c> "*yi		   " Copy
 vnoremap <C-x> d           " Cut
-
 
 
