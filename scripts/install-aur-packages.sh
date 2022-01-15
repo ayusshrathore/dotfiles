@@ -14,7 +14,7 @@ makepkg -si --no-confirm
 echo
 echo "======> Installing AUR Packages"
 echo
-yay -S $(<aur-packages.txt)
+yay -S $(<packages_aur.txt)
 
 echo
 echo "======> Installing oh-my-zsh"
