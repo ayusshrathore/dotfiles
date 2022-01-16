@@ -1,13 +1,12 @@
 # Exec Sway
 [ "$(tty)" = "/dev/tty1" ] && exec sway
 
+# Source plugins
+source ~/.config/.zsh/zsh-auto/zsh-autosuggestions.zsh
+source ~/.config/.zsh/fast-syntax-highlighting.plugin.zsh
+
 # Code Editor for Expo
 export REACT_EDITOR=code
-
-# oh-my-zsh
-export ZSH="/home/$USER/.oh-my-zsh"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
 
 # Micro
 export MICRO_TRUECOLOR=1
@@ -16,7 +15,10 @@ export MICRO_TRUECOLOR=1
 eval "$(starship init zsh)"
 
 # llama
-alias ll='llama'
+# alias ll='llama'
+function fm() {
+  cd "$(llama "$@")"
+}
 export EDITOR=micro
 
 # Aliases
@@ -30,6 +32,12 @@ export EDITOR=micro
 	alias la='ls -a'
 	alias lla='ls -la'
 	alias lt='ls --tree'
+
+	# Unzip
+	alias u='unzip'
+
+	# Make a directory
+	alias md='mkdir'
 
 	# Pacman & Yay
 	alias \
