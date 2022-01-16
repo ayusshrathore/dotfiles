@@ -58,9 +58,6 @@ export EDITOR=micro
 		gm='git merge' \
 		gmnf='git merge --no-ff'
 
-	# Sync Swayland changes with Git Repo
-    alias ss='cp -r .config/sway .config/waybar .config/alacritty .config/swaylock .config/mako .config/wofi GitHub/swayland'
-
 	# Network Manager
     alias \
         nmcon='nmcli device wifi connect' \
