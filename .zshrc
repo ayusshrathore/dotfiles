@@ -2,8 +2,8 @@
 [ "$(tty)" = "/dev/tty1" ] && exec sway
 
 # Source plugins
-source ~/.config/.zsh/zsh-auto/zsh-autosuggestions.zsh
-source ~/.config/.zsh/fast-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
+source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 
 # Code Editor for Expo
 export REACT_EDITOR=code
@@ -25,6 +25,9 @@ export EDITOR=micro
 
 	# Clear console
 	alias c='clear'
+
+	# Up a directory
+	alias ..='cd ..'
 
 	# ls commands
 	alias ls='lsd'
@@ -60,8 +63,13 @@ export EDITOR=micro
 
 	# Git
 	alias \
+		ga='git add' \
+		gd='git diff' \
+		gs='git status' \
+		gcm='git commit -m' \
+		gp='git push' \
 		gpo='git push origin' \
-		gcm='git checkout main' \
+		gcom='git checkout main' \
 		grao='git remote add origin' \
 		gm='git merge' \
 		gmnf='git merge --no-ff'
