@@ -24,6 +24,13 @@ export EDITOR=micro
 	# Clear console
 	alias c='clear'
 
+	# ls commands
+	alias ls='lsd'
+	alias l='ls -l'
+	alias la='ls -a'
+	alias lla='ls -la'
+	alias lt='ls --tree'
+
 	# Pacman & Yay
 	alias \
 		install='sudo pacman -S' \
@@ -48,6 +55,7 @@ export EDITOR=micro
 		gpo='git push origin' \
 		gcm='git checkout main' \
 		grao='git remote add origin' \
+		gm='git merge' \
 		gmnf='git merge --no-ff'
 
 	# Sync Swayland changes with Git Repo
