@@ -9,5 +9,7 @@ python-protonvpn-nm-lib
 spicetify-cli
 spotify
 spotify-adblock
+sway-audio-idle-inhibit-git
 ttf-font-logos
 visual-studio-code-bin
+yay-git

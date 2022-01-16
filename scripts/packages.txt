@@ -36,6 +36,7 @@ libtool
 libva-mesa-driver
 linux
 linux-firmware
+lsd
 m4
 make
 mako
@@ -68,6 +69,7 @@ slurp
 smartmontools
 starship
 sudo
+swappy
 sway
 swayidle
 swaylock
