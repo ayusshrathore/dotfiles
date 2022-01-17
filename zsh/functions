@@ -38,6 +38,14 @@ export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} -0 --height '45%' --reverse"
 alias clipbd="wl-copy"
 alias devar="unset var"
 
+# mf [micro fuzzy]: open a file in $EDITOR
+mf() {
+    [ -n "$1" ] && "$EDITOR" "$1" && return 0
+    var="$(fzf --prompt "edit ")"
+    [ -n "$var" ] && "$EDITOR" "$var"
+    devar; return 0
+}
+
 # cf [cd fuzzy]: cd from $HOME
 cf() {
     [ -n "$1" ] && cd "$1" 2>/dev/null && return 0
