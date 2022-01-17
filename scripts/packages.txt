@@ -69,7 +69,6 @@ slurp
 smartmontools
 starship
 sudo
-swappy
 sway
 swayidle
 swaylock
@@ -100,3 +99,5 @@ xorg-server
 xorg-xinit
 xorg-xwayland
 zsh
+fd
+p7zip
