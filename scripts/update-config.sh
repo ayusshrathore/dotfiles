@@ -1,5 +1,7 @@
 cp -rv ${HOME}/.zshrc ../
 cp -rv ${HOME}/.vimrc ../
+cp -rv ${HOME}/.config/zsh/functions ../zsh/
+cp -rv ${HOME}/.config/zsh/settings.zsh ../zsh/
 cp -rv ${HOME}/.config/micro ../
 cp -rv ${HOME}/.config/lsd ../
 cp -rv ${HOME}/.config/starship.toml ../

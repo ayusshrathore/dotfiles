@@ -8,6 +8,9 @@ fi
 # running commands to configure the system
 cp main.conf /etc/bluetooth/
 systemctl enable NetworkManager
+
+# Set time-date
+timedatectl set-timezone 'Asia/Kolkata'
 timedatectl set-ntp true
 
 # Pacman Conf
