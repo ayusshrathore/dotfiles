@@ -12,7 +12,7 @@ systemctl enable bluetooth
 timedatectl set-ntp true
 
 # Pacman Conf
-printf "UseSyslog\nColor\nCheckSpace\nVerbosePkgLists\n" > /etc/pacman.conf
+printf "[options]\nUseSyslog\nColor\nCheckSpace\nVerbosePkgLists\n" > /etc/pacman.conf
 mkinitcpio -p linux
 
 localectl set-locale LANG=en_US.UTF-8
