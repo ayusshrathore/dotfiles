@@ -5,6 +5,15 @@
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 
+# Source Other files
+source ~/.config/zsh/functions
+source ~/.config/zsh/settings.zsh
+
+# ZSH History
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=1000
+
 # Code Editor for Expo
 export REACT_EDITOR=code
 
@@ -70,6 +79,7 @@ export EDITOR=micro
 		gp='git push' \
 		gl='git pull' \
 		gpo='git push origin' \
+		gco='git checkout' \
 		gcom='git checkout main' \
 		grao='git remote add origin' \
 		gm='git merge' \
