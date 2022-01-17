@@ -11,3 +11,4 @@ echo
 
 # --noconfirm is used to select all packages from groups
 pacman -Sy --needed $(<packages.txt)
+pacman -S --needed base-devel

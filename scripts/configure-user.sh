@@ -24,9 +24,6 @@ cp -frv \
 	${HOME}/
 
 cp -frv \
-	../fontconfig \
-	../gtk-2.0 \
-	../gtk-3.0 \
 	../micro \
 	../spicetify \
 	../starship.toml \

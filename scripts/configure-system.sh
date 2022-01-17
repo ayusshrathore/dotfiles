@@ -6,11 +6,13 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # running commands to configure the system
-printf "[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
+printf "[General]\nDiscoverableTimeout = 0\nAlwaysPairable = true\n[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
 systemctl enable NetworkManager
 systemctl enable bluetooth
 timedatectl set-ntp true
 
+# Pacman Conf
+printf "UseSyslog\nColor\nCheckSpace\nVerbosePkgLists\n" > /etc/pacman.conf
 mkinitcpio -p linux
 
 localectl set-locale LANG=en_US.UTF-8
