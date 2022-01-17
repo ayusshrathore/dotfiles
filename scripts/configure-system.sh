@@ -6,9 +6,8 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # running commands to configure the system
-printf "[General]\nDiscoverableTimeout = 0\nAlwaysPairable = true\n[Policy]\nAutoEnable=true" > /etc/bluetooth/main.conf
+cp main.conf /etc/bluetooth/
 systemctl enable NetworkManager
-systemctl enable bluetooth
 timedatectl set-ntp true
 
 # Pacman Conf
