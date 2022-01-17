@@ -68,11 +68,14 @@ export EDITOR=micro
 		gs='git status' \
 		gcm='git commit -m' \
 		gp='git push' \
+		gl='git pull' \
 		gpo='git push origin' \
 		gcom='git checkout main' \
 		grao='git remote add origin' \
 		gm='git merge' \
-		gmnf='git merge --no-ff'
+		gmnf='git merge --no-ff' \
+		gr='git restore' \
+		grs='git restore --staged'
 
 	# Network Manager
     alias \
