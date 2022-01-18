@@ -28,6 +28,7 @@ eval "$(starship init zsh)"
 function fm() {
   cd "$(llama "$@")"
 }
+
 export EDITOR=micro
 
 # Aliases
@@ -78,6 +79,7 @@ export EDITOR=micro
 		gcm='git commit -m' \
 		gp='git push' \
 		gl='git pull' \
+		gc='git clone' \
 		gpo='git push origin' \
 		gco='git checkout' \
 		gcom='git checkout main' \
