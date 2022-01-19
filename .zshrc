@@ -3,7 +3,7 @@
 
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
-source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
 
 # Source Other files
 source ~/.config/zsh/functions
