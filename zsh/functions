@@ -41,8 +41,16 @@ alias devar="unset var"
 # mf [micro fuzzy]: open a file in $EDITOR
 mf() {
     [ -n "$1" ] && "$EDITOR" "$1" && return 0
-    var="$(fzf --prompt "edit ")"
+    var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "micro ")"
     [ -n "$var" ] && "$EDITOR" "$var"
+    devar; return 0
+}
+
+# cof [code fuzzy]: open a file in VS Code
+cof() {
+    [ -n "$1" ] && "$EDITOR" "$1" && return 0
+    var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "code ")"
+    [ -n "$var" ] && code "$var"
     devar; return 0
 }
 
@@ -135,9 +143,6 @@ gifs() {
 
 
 ### Profiles ###
-
-
-  
 #!/bin/sh
 # profile - runs on login
 #           read by login shell

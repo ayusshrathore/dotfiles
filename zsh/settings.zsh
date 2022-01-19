@@ -28,10 +28,9 @@ setopt interactivecomments
 zle_highlight=('paste:none')
 
 # this speeds up pasting with autosuggestions
-# https://github.com/zsh-users/zsh-autosuggestions/issues/238#issuecomment-389324292
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+  zle -N self-insert url-quote-magic
 }
 
 pastefinish() {
