@@ -1,6 +1,9 @@
 # Exec Sway
 [ "$(tty)" = "/dev/tty1" ] && exec sway
 
+XDG_SESSION_TYPE=wayland
+XDG_CURRENT_DESKTOP=sway
+
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
@@ -22,6 +25,9 @@ export MICRO_TRUECOLOR=1
 
 # Starship
 eval "$(starship init zsh)"
+
+#Neofetch on startup
+neofetch --ascii ~/.config/neofetch/arch
 
 # llama
 # alias ll='llama'
