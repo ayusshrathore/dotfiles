@@ -14,10 +14,10 @@ echo
 yay -Y --devel --combinedupgrade --batchinstall --save
 yay -S \
 	7-zip-bin \
-	autotiling \
 	google-chrome \
 	nerd-fonts-jetbrains-mono \
 	pfetch \
+	ponymix \
 	protonvpn-cli \
 	python-proton-client \
 	python-protonvpn-nm-lib \
@@ -25,5 +25,6 @@ yay -S \
 	spotify \
 	spotify-adblock \
 	sway-audio-idle-inhibit-git \
+	swaylock-effects \
 	ttf-font-logos \
 	visual-studio-code-bin
