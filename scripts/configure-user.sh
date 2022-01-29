@@ -19,12 +19,17 @@ mkdir -p ${HOME}/.config
 
 cp -frv \
 	../.themes \
-	../.vimrc \
 	../.zshrc \
 	${HOME}/
 
 cp -frv \
 	../micro \
+	../fontconfig \
+	../gtk-3.0 \
+	../lsd \
+	../mpv \
+	../neofetch \
+	../zsh \
 	../spicetify \
 	../starship.toml \
 	${HOME}/.config/
