@@ -4,6 +4,20 @@
 XDG_SESSION_TYPE=wayland
 XDG_CURRENT_DESKTOP=sway
 
+# Shell Options
+setopt autocd
+setopt APPEND_HISTORY 
+setopt INC_APPEND_HISTORY 
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt EXTENDED_HISTORY
+setopt COMPLETE_IN_WORD 
+setopt ALWAYS_TO_END            
+setopt PROMPT_SUBST
+unsetopt MENU_COMPLETE
+setopt AUTO_MENU
+
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
@@ -52,17 +66,10 @@ export EDITOR=micro
 	alias lla='ls -la'
 	alias lt='ls --tree'
 
-	# Unzip
-	alias u='unzip'
-
-	# Make a directory
-	alias md='mkdir'
-
 	# Pacman & Yay
 	alias \
 		install='sudo pacman -S' \
-		remove='sudo pacman -R' \
-	 	apps='sudo pacman -Qe' \
+		remove='sudo pacman -Rns' \
 	 	update='yay -Syu && yay -Sc' \
         clean='sudo pacman -Qdtq | sudo pacman -Rs -'
 
