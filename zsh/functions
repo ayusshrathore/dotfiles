@@ -65,13 +65,6 @@ mf() {
     devar; return 0
 }
 
-# vf [vim fuzzy]: open a file in vim
-vf() {
-    var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "vim ")"
-    [ -n "$var" ] && vim "$var"
-    devar; return 0
-}
-
 # cof [code fuzzy]: open a file in VS Code
 cof() {
     var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "code ")"
@@ -164,6 +157,44 @@ gifs() {
     return 0
 }
 
+#fuzzy wifi
+wifi() {
+	has() {
+	  local verbose=false
+	  if [[ $1 == '-v' ]]; then
+	    verbose=true
+	    shift
+	  fi
+	  for c in "$@"; do c="${c%% *}"
+	    if ! command -v "$c" &> /dev/null; then
+	      [[ "$verbose" == true ]] && err "$c not found"
+	      return 1
+	    fi
+	  done
+	}
+	
+	err() {
+	  printf '\e[31m%s\e[0m\n' "$*" >&2
+	}
+	
+	die() {
+	  (( $# > 0 )) && err "$*"
+	  exit 1
+	}
+	
+	has -v nmcli fzf || die
+	
+	nmcli -f 'bssid,signal,ssid' --color yes device wifi |
+	  fzf \
+	  --with-nth=2.. \
+	  --ansi \
+	  --height=40% \
+	  --reverse \
+	  --cycle \
+	  --inline-info \
+	  --header-lines=1 \
+	  --bind="enter:execute:nmcli -a device wifi connect {1}"
+}
 
 ### Profiles ###
 #!/bin/sh
