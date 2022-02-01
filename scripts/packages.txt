@@ -34,6 +34,7 @@ gvfs
 gvfs-mtp
 gzip
 htop
+inter-font
 iwd
 libgnome-keyring
 libmad
