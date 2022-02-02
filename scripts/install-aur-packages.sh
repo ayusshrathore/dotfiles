@@ -11,12 +11,11 @@ makepkg -si
 echo
 echo "======> Installing AUR Packages"
 echo
-yay -Y --devel --combinedupgrade --batchinstall --save
+yay -Y --devel --combinedupgrade --batchinstall --no-diff-menu --save
 yay -S \
 	7-zip-bin \
 	google-chrome \
 	nerd-fonts-jetbrains-mono \
-	pfetch \
 	ponymix \
 	protonvpn-cli \
 	python-proton-client \
