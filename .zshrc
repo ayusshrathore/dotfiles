@@ -79,10 +79,8 @@ export EDITOR=micro
 	# VS Code
 	alias code='code .'
 
-	# Proton-VPN
-	alias \
-		connect='protonvpn-cli connect' \
-		disconnect='protonvpn-cli disconnect'
+	# Micro
+	alias m='micro'
 
 	# Git
 	alias \
