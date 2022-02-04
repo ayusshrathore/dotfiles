@@ -96,7 +96,7 @@ export EDITOR=micro
 		gcom='git checkout main' \
 		grao='git remote add origin' \
 		gm='git merge' \
-		gmnf='git merge --no-ff' \
+		gmnf='git merge --no-commit --no-ff' \
 		gr='git restore' \
 		grs='git restore --staged'
 
