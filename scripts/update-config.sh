@@ -1,6 +1,4 @@
 cp -rv ${HOME}/.zshrc ../
-cp -rv ${HOME}/.vimrc ../
-cp -rv ${HOME}/.config/gtk-2.0 ../
 cp -rv ${HOME}/.config/gtk-3.0 ../
 cp -rv ${HOME}/.config/zsh/functions ../zsh/
 cp -rv ${HOME}/.config/zsh/settings.zsh ../zsh/

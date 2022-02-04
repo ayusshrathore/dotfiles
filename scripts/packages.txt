@@ -8,8 +8,8 @@ binutils
 bison
 bluez
 bluez-utils
+blueman
 btop
-cmus
 dunst
 efibootmgr
 fakeroot
@@ -56,7 +56,6 @@ nautilus
 neofetch
 networkmanager
 nodejs-lts-gallium
-noto-fonts
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -86,7 +85,6 @@ telegram-desktop
 texinfo
 ttf-dejavu
 ttf-font-awesome
-ttf-linux-libertine
 ttf-ubuntu-font-family
 unzip
 vi

@@ -17,9 +17,6 @@ yay -S \
 	google-chrome \
 	nerd-fonts-jetbrains-mono \
 	ponymix \
-	protonvpn-cli \
-	python-proton-client \
-	python-protonvpn-nm-lib \
 	spicetify-cli \
 	spotify \
 	spotify-adblock \
