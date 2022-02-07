@@ -65,6 +65,13 @@ mf() {
     devar; return 0
 }
 
+# feh [feh fuzzy]: open a file in feh
+fehf() {
+    var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "feh ")"
+    [ -n "$var" ] && feh --scale-down --auto-zoom "$var"
+    devar; return 0
+}
+
 # cof [code fuzzy]: open a file in VS Code
 cof() {
     var="$(fd -d5 -tf --follow --hidden --search-path ~ 2>/dev/null | fzf --prompt "code ")"
