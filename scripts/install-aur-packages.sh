@@ -14,6 +14,7 @@ echo
 yay -Y --devel --combinedupgrade --batchinstall --no-diff-menu --save
 yay -S \
 	7-zip-bin \
+	autotiling-rs \
 	google-chrome \
 	nerd-fonts-jetbrains-mono \
 	ponymix \
