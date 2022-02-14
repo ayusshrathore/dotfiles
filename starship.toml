@@ -18,8 +18,8 @@ format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-symbol = "🌱 "
-style = "bold yellow"
+symbol = "שׂ "
+style = "bold purple"
 
 [git_commit]
 commit_hash_length = 8
@@ -27,17 +27,18 @@ style = "bold white"
 
 [git_status]
 conflicted = "="
-ahead = "⇡"
-behind = "⇣"
+ahead = "⇡${count} "
+behind = "⇣${count} "
 diverged = "⇕"
 up_to_date = "✓"
-untracked =	"?"
-stashed = "$"
-modified = "!"
+untracked =	"?${count} "
+stashed = "$${count} "
+modified = "!${count} "
 staged = '[+\($count\)](green)'
-renamed = "»"
-deleted = "✘"
+renamed = "»${count} "
+deleted = "✘${count} "
 style = "bold purple"
+format = "[$all_status]($style)"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
