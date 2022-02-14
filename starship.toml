@@ -38,7 +38,7 @@ staged = '[+\($count\)](green)'
 renamed = "»${count} "
 deleted = "✘${count} "
 style = "bold purple"
-format = "[$all_status]($style)"
+format = "[$all_status$ahead_behind]($style)"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
