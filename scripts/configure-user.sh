@@ -8,7 +8,7 @@ fi
 echo
 echo "======> Installing ZSH-Plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.config/zsh/zsh-auto
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${HOME}/.config/zsh/zsh-syntax
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ${HOME}/.config/zsh/fsh
 
 echo "======> Installing Inter font"
 echo
