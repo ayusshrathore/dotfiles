@@ -3,6 +3,7 @@
 
 XDG_SESSION_TYPE=wayland
 XDG_CURRENT_DESKTOP=sway
+QT_QPA_PLATFORM=wayland
 
 # Shell Options
 setopt autocd
@@ -20,7 +21,7 @@ setopt AUTO_MENU
 
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
-source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 
 # Source Other files
 source ~/.config/zsh/functions
