@@ -1,9 +1,15 @@
 # Exec Sway
 [ "$(tty)" = "/dev/tty1" ] && exec sway
 
+# Wayland & Sway
 XDG_SESSION_TYPE=wayland
 XDG_CURRENT_DESKTOP=sway
 QT_QPA_PLATFORM=wayland
+
+# Exporting variables
+export TERMINAL=alacritty
+export BROWSER=google-chrome-stable
+export EDITOR=micro
 
 # Shell Options
 setopt autocd
@@ -32,25 +38,19 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=1000
 
-# Code Editor for Expo
-export REACT_EDITOR=code
-
 # Micro
 export MICRO_TRUECOLOR=1
 
 # Starship
 eval "$(starship init zsh)"
 
-#Neofetch on startup
+# Neofetch on startup
 neofetch --ascii ~/.config/neofetch/arch
 
 # llama
-# alias ll='llama'
 function fm() {
   cd "$(llama "$@")"
 }
-
-export EDITOR=micro
 
 # Aliases
 
