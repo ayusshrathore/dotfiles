@@ -203,12 +203,6 @@ wifi() {
 	  --bind="enter:execute:nmcli -a device wifi connect {1}"
 }
 
-### Profiles ###
-#!/bin/sh
-# profile - runs on login
-#           read by login shell
-#           set environment variables here
-
 # XDG base directory
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
