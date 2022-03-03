@@ -1,8 +1,14 @@
-update:
-	cd scripts && ./update-config.sh
+configure-system:
+	cd scripts && sudo ./configure-system.sh
 
-configure:
-	cd scripts && sudo ./configure-system.sh && ./configure-user.sh
+configure-user:
+	cd scripts && ./configure-user.sh
 
 install:
-	cd scripts && sudo ./install-packages.sh && ./install-aur-packages.sh
+	cd scripts && sudo ./install-packages.sh
+
+install-aur:
+	cd scripts && ./install-aur-packages.sh
+
+update:
+	cd scripts && ./update-config.sh
