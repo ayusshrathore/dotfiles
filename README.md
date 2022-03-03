@@ -8,9 +8,11 @@ git clone https://github.com/ayush-rathore/dotfiles && cd dotfiles
 
 ### Usage
 
-`make install` - Install Pacman & AUR Packages <br/>
-`make config`  - Configure system & copy dotfiles to `${HOME}` & `XDG_CONFIG_HOME` <br/>
-`make update`  - Sync local `dotfiles` with `dotfiles`
+`make install` - Install Pacman Packages <br/>
+`make install-aur` - Install AUR Packages <br/>
+`make configure-system`  - Configure system <br/>
+`make configure-user` - Copy dotfiles to `$HOME`
+`make update`  - Sync local `dotfiles`
 
 ## Credits
 
