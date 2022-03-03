@@ -11,7 +11,7 @@ git clone https://github.com/ayush-rathore/dotfiles && cd dotfiles
 `make install` - Install Pacman Packages <br/>
 `make install-aur` - Install AUR Packages <br/>
 `make configure-system`  - Configure system <br/>
-`make configure-user` - Copy dotfiles to `$HOME`
+`make configure-user` - Copy dotfiles to `$HOME` <br/>
 `make update`  - Sync local `dotfiles`
 
 ## Credits
