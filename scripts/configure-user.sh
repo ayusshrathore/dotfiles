@@ -7,8 +7,8 @@ fi
 
 echo
 echo "======> Installing ZSH-Plugins"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${HOME}/.config/zsh/zsh-auto
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ${HOME}/.config/zsh/fsh
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/zsh-auto
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $HOME/.config/zsh/fsh
 
 echo "======> Installing Inter font"
 echo
@@ -18,14 +18,15 @@ git clone https://github.com/ayush-rathore/inter-nerd-font $HOME/.local/share/fo
 echo "======> Copying config files"
 echo
 
-mkdir -p ${HOME}/.config
+mkdir -p $HOME/.config/
 
 cp -frv \
 	../.zshrc \
-	${HOME}/
+	$HOME/
 
 cp -frv \
 	../micro \
+	../feh \
 	../fontconfig \
 	../gtk-3.0 \
 	../lsd \
@@ -34,6 +35,6 @@ cp -frv \
 	../zsh \
 	../spicetify \
 	../starship.toml \
-	${HOME}/.config/
+	$HOME/.config/
 
 echo "======> Dotfiles copied!"

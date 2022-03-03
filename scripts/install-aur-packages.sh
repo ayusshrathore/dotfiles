@@ -3,7 +3,7 @@
 echo
 echo "======> Installing Yay"
 echo
-cd ${HOME}
+cd
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
@@ -11,7 +11,7 @@ makepkg -si
 echo
 echo "======> Installing AUR Packages"
 echo
-yay -Y --devel --combinedupgrade --batchinstall --no-diff-menu --save
+yay -Y --devel --combinedupgrade --batchinstall --nodiffmenu --save
 yay -S \
 	7-zip-bin \
 	autotiling-rs \
@@ -22,6 +22,5 @@ yay -S \
 	spotify \
 	spotify-adblock \
 	sway-audio-idle-inhibit-git \
-	swaylock-effects \
 	ttf-font-logos \
 	visual-studio-code-bin

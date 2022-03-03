@@ -6,7 +6,6 @@ base
 bat
 binutils
 bison
-blueman
 bluez
 bluez-utils
 btop
@@ -102,7 +101,6 @@ wireless_tools
 wl-clipboard
 wofi
 xdg-desktop-portal
-xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-utils
 xf86-video-amdgpu
