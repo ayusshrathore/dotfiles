@@ -12,7 +12,7 @@ cp -rv $HOME/.config/micro/*.json ../micro/
 cp -rv $HOME/.config/lsd ../
 
 # mpv
-cp -rv $HOME/.config/mpv ../
+cp -rv $HOME/.config/mpv/*.conf ../mpv
 
 # gtk-3.0
 cp -rv $HOME/.config/gtk-3.0 ../
