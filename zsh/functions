@@ -23,33 +23,11 @@ extr () {
     fi
 }
 
-# navigation
-up () {
-  local d=""
-  local limit="$1"
-
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
-
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
-
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
-}
-
 # Make dir & cd
 mcd() {
     mkdir -p "$1" && cd "$1"
 }
 
-# Change man pager
-command -v bat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ### FZF Functions ###
 # default fzf options
@@ -108,7 +86,7 @@ hst() {
     devar; return 0
 }
 
-# i use arch btw
+# btw, i use arch
 if [ -f "/etc/arch-release" ]; then
 # pacls [pacman list]: list all installed packages
 pacls() {
@@ -202,10 +180,3 @@ wifi() {
 	  --header-lines=1 \
 	  --bind="enter:execute:nmcli -a device wifi connect {1}"
 }
-
-# XDG base directory
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-
-# zsh config dir
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
