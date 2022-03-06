@@ -28,6 +28,10 @@ mcd() {
     mkdir -p "$1" && cd "$1"
 }
 
+# llama
+fm() {
+  cd "$(llama "$@")"
+}
 
 ### FZF Functions ###
 # default fzf options

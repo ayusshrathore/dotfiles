@@ -9,14 +9,6 @@ source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
 source ~/.config/zsh/functions
 source ~/.config/zsh/settings.zsh
 
-# Neofetch on startup
-neofetch --ascii ~/.config/neofetch/arch
-
-# llama
-function fm() {
-  cd "$(llama "$@")"
-}
-
 # Aliases
 
 # zshrc 
