@@ -21,10 +21,11 @@ echo
 mkdir -p $HOME/.config/
 
 cp -frv \
-	../.zshrc \
-	$HOME/
+	../.zshenv \
+	$HOME
 
 cp -frv \
+	../btop \
 	../micro \
 	../feh \
 	../fontconfig \
@@ -35,6 +36,6 @@ cp -frv \
 	../zsh \
 	../spicetify \
 	../starship.toml \
-	$HOME/.config/
+	$HOME/.config
 
 echo "======> Dotfiles copied!"

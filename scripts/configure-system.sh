@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Bluetooth Configuration
-cp -fv main.conf /etc/bluetooth/
+cp -fv system-configs/main.conf /etc/bluetooth/
 
 # Start Network Manager
 systemctl enable NetworkManager
@@ -16,8 +16,8 @@ timedatectl set-timezone 'Asia/Kolkata'
 timedatectl set-ntp true
 
 # Pacman Configuration
-cp -fv pacman.conf /etc/
-cp -fv mirrorlist /etc/pacman.d/
+cp -fv system-configs/pacman.conf /etc/
+cp -fv system-configs/mirrorlist /etc/pacman.d/
 
 mkinitcpio -p linux
 localectl set-locale LANG=en_US.UTF-8
