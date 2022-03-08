@@ -26,7 +26,7 @@ cp -frv \
 	$HOME/
 
 cp -frv \
-	./.config/* \
+	../.config/* \
 	$HOME/.config
 
 echo "======> Dotfiles copied!"
@@ -36,3 +36,7 @@ cp -frv \
 	$HOME/
 
 echo "======> Wallpapers copied!"
+
+echo "======> Installing GTK theme"
+git clone https://github.com/Manas140/paradise.git && cd paradise
+./install.sh -d
