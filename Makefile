@@ -1,14 +1,14 @@
 system:
-	cd scripts && sudo ./configure-system.sh
+	cd scripts && sudo ./system.sh
 
 user:
-	cd scripts && ./configure-user.sh
+	cd scripts && ./user.sh
 
 install:
-	cd scripts && sudo ./install-packages.sh
+	cd scripts && sudo ./pacman.sh
 
 aur:
-	cd scripts && ./install-aur-packages.sh
+	cd scripts && ./aur.sh
 
 update:
-	cd scripts && ./update-config.sh
+	cd scripts && ./update.sh
