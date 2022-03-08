@@ -20,7 +20,6 @@ git clone https://github.com/ayush-rathore/inter-nerd-font $HOME/.local/share/fo
 
 echo "======> Copying dotfiles"
 echo
-
 cp -frv \
 	../.zshenv \
 	$HOME/
@@ -31,6 +30,7 @@ cp -frv \
 
 echo "======> Dotfiles copied!"
 
+mkdir -p $HOME/Pictures
 cp -frv \
 	Pictures \
 	$HOME/
@@ -38,5 +38,8 @@ cp -frv \
 echo "======> Wallpapers copied!"
 
 echo "======> Installing GTK theme"
+mkdir -p $HOME/.themes
+mkdir tmp && cd tmp
 git clone https://github.com/Manas140/paradise.git && cd paradise
 ./install.sh -d
+rm -rf tmp

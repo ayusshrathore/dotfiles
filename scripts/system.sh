@@ -6,6 +6,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Bluetooth Configuration
+mkdir /etc/bluetooth
 cp -fv system-configs/main.conf /etc/bluetooth/
 
 # Start Network Manager
