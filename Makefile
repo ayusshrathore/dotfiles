@@ -4,7 +4,7 @@ system:
 user:
 	cd scripts && ./user.sh
 
-install:
+pacman:
 	cd scripts && sudo ./pacman.sh
 
 aur:
