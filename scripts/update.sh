@@ -14,13 +14,11 @@ cp -frv \
 	$HOME/.config/fontconfig \
 	$HOME/.config/gtk-3.0 \
 	$HOME/.config/lsd \
-	$HOME/.config/micro/*.json \
 	$HOME/.config/mpv \
 	$HOME/.config/neofetch \
 	$HOME/.config/sway \
 	$HOME/.config/swaylock \
 	$HOME/.config/waybar \
 	$HOME/.config/wofi \
-	$HOME/.config/yay \
 	$HOME/.config/starship.toml \
 	../.config/
