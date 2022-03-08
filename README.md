@@ -1,6 +1,10 @@
-# dotfiles
+<p align="center">
+  <h1 align="center">dotfiles</h1>
+</p>
 
-dotfiles for my swayland
+<p align="center">
+    Dotfiles for my swayland
+</p>
 
 ## Dependencies
 
@@ -15,6 +19,12 @@ dotfiles for my swayland
 -   [Light](https://github.com/haikarainen/light) - Brightness Controller 
 -   [XWayland](https://wayland.freedesktop.org/xserver.html) - X Clients under Wayland
 -	[Autotiling](https://github.com/ammgws/autotiling-rs) - Autotiling for Sway
+
+## Screenshots
+
+![1](https://github.com/ayush-rathore/dotfiles/raw/assets/1.png)
+![2](https://github.com/ayush-rathore/dotfiles/raw/assets/2.png)
+![3](https://github.com/ayush-rathore/dotfiles/raw/assets/3.png)
 
 ## Credits
 
