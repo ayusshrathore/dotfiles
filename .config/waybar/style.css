@@ -23,7 +23,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-	color: #EF4444;
+	color: #E57373;
 }
 
 #workspaces button:hover {
