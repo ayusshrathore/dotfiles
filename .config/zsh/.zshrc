@@ -1,6 +1,9 @@
 # Starship
 eval "$(starship init zsh)"
 
+# Neofetch on startup
+neofetch --ascii ~/.config/neofetch/arch
+
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh

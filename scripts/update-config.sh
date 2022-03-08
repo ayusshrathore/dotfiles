@@ -1,27 +1,26 @@
-# zsh files
-cp -rv $HOME/.config/zsh/functions ../zsh/
-cp -rv $HOME/.config/zsh/settings.zsh ../zsh/
-cp -rv $HOME/.config/zsh/.zshrc ../zsh/
-cp -rv $HOME/.config/zsh/.zshenv ../zsh/
-cp -rv $HOME/.config/zsh/.zprofile ../zsh/
+# zsh config files
+cp -frv $HOME/.config/zsh/functions ../.config/zsh/
+cp -frv $HOME/.config/zsh/settings.zsh ../.config/zsh/
+cp -frv $HOME/.config/zsh/.zshrc ../.config/zsh/
+cp -frv $HOME/.config/zsh/.zshenv ../.config/zsh/
+cp -frv $HOME/.config/zsh/.zprofile ../.config/zsh/
 
-# micro
-cp -rv $HOME/.config/micro/*.json ../micro/
-
-# lsd
-cp -rv $HOME/.config/lsd ../
-
-# mpv
-cp -rv $HOME/.config/mpv/*.conf ../mpv
-
-# gtk-3.0
-cp -rv $HOME/.config/gtk-3.0 ../
-
-# neofetch
-cp -rv $HOME/.config/neofetch ../
-
-# starship
-cp -rv $HOME/.config/starship.toml ../
-
-# spicetify
-cp -rv $HOME/.config/spicetify/config-xpui.ini ../spicetify
+# copy config files
+cp -frv \
+	$HOME/.config/alacritty \
+	$HOME/.config/btop \
+	$HOME/.config/dunst \
+	$HOME/.config/feh \
+	$HOME/.config/fontconfig \
+	$HOME/.config/gtk-3.0 \
+	$HOME/.config/lsd \
+	$HOME/.config/micro/*.json \
+	$HOME/.config/mpv \
+	$HOME/.config/neofetch \
+	$HOME/.config/sway \
+	$HOME/.config/swaylock \
+	$HOME/.config/waybar \
+	$HOME/.config/wofi \
+	$HOME/.config/yay \
+	$HOME/.config/starship.toml \
+	../.config/

@@ -1,19 +1,21 @@
-## Dotfiles
+# dotfiles
 
-### Installation
+dotfiles for my swayland
 
-```bash
-git clone https://github.com/ayush-rathore/dotfiles && cd dotfiles
-```
+## Dependencies
 
-### Usage
-
-`make install` - Install Pacman Packages <br/>
-`make install-aur` - Install AUR Packages <br/>
-`make configure-system`  - Configure system <br/>
-`make configure-user` - Copy dotfiles to `$HOME` <br/>
-`make update`  - Sync local `dotfiles`
+-   [Sway](https://github.com/swaywm/sway) - Window Manager for Wayland
+-   [Waybar](https://github.com/Alexays/Waybar) - Status Bar for Wayland
+-   [Wofi](https://github.com/tsujp/wofi) - Menu & Launcher
+-   [Alacritty](https://github.com/alacritty/alacritty) - Terminal Emulator
+-   [Grim](https://github.com/emersion/grim) - Screenshot Utility
+-	[Slurp](https://github.com/emersion/slurp) - Screenshot window selection tool
+-   [Dunst](https://github.com/dunst-project/dunst) - Notification Daemon
+-   [Playerctl](https://github.com/altdesktop/playerctl) - Media Player Controller
+-   [Light](https://github.com/haikarainen/light) - Brightness Controller 
+-   [XWayland](https://wayland.freedesktop.org/xserver.html) - X Clients under Wayland
+-	[Autotiling](https://github.com/ammgws/autotiling-rs) - Autotiling for Sway
 
 ## Credits
 
-Credits to [Jitesh](https://github.com/pixxel8) for fuzzy functions.
+Credits to [Aarav](https://github.com/Aarav619) for finding python alternatives.

@@ -1,13 +1,13 @@
-configure-system:
+system:
 	cd scripts && sudo ./configure-system.sh
 
-configure-user:
+user:
 	cd scripts && ./configure-user.sh
 
 install:
 	cd scripts && sudo ./install-packages.sh
 
-install-aur:
+aur:
 	cd scripts && ./install-aur-packages.sh
 
 update:

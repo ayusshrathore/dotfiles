@@ -42,7 +42,6 @@ starship
 sway
 telegram-desktop
 ttf-fira-code
-ttf-jetbrains-mono
 unzip
 vi
 wget

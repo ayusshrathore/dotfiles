@@ -1,0 +1,67 @@
+{
+    "height": 30,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [ "tray", "network", "memory", "pulseaudio", "battery"],
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+            "urgent": "",
+            "default": "",
+            "focused": "",
+         }
+     },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%I:%M}",
+        "tooltip-format": "{:%a, %d %b}" 
+    },
+    "memory": {
+         "format": "﬙ {used:0.1f}GB",
+         "interval": 1,
+         "tooltip": false
+     },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 1,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% ",
+        "format-full": "{capacity}% ",
+        "format-plugged": "{capacity}% "
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "No Internet!",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "{format_source}",
+        "format-muted": "{format_source}",
+		"format-source": "婢",
+		"format-source-muted": "婢",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    }
+}

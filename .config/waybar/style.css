@@ -1,0 +1,97 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "Inter Nerd Font";
+	font-size: 13px;
+	font-weight: bold; 
+	min-height: 0;
+}
+
+window#waybar { 
+	background-color: transparent;
+}
+
+#workspaces button {
+	padding: 0 4px;
+	min-width: 20px;
+	/* color: #F06292; */
+	color: #D946EF; 
+}
+
+#workspaces button.focused {
+	color: #42a5f5;
+}
+
+#workspaces button.urgent {
+	color: #EF4444;
+}
+
+#workspaces button:hover {
+	background: rgba(0, 0, 0, 0);
+}
+
+tooltip { 
+	background-color: #262626;
+	border-radius: 5px;
+}
+
+#battery,
+#memory,
+#disk,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#window {
+ 	padding: 0 5px;
+    margin: 1px 1px;
+}
+
+#battery,
+#battery.charging,
+#battery.plugged {
+	color: #E879F9;
+}
+
+#network {
+	color: #86EFAC;
+	font-size: 13.5px;
+}
+
+#pulseaudio,
+#pulseaudio.muted {
+	color: #F48FB1;
+}
+
+#memory {
+	color: #FFEE58;
+}
+
+#pulseaudio.muted { 
+     font-size: 16px; 
+} 
+
+#clock { 
+	color: #4FC3F7; 
+}
+
+#workspaces {
+	margin: 0 4px;
+}
+
+@keyframes blink {
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: #f53c3c;
+	color: #ffffff;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}

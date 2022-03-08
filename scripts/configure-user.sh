@@ -5,37 +5,34 @@ if [ "$EUID" -eq 0 ]
         exit
 fi
 
+mkdir -p $HOME/.config/
+
 echo
 echo "======> Installing ZSH-Plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.config/zsh/zsh-auto
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $HOME/.config/zsh/fsh
 
+mkdir -p $HOME/.local/share/
+
 echo "======> Installing Inter font"
 echo
-mkdir -p $HOME/.local/share/
 git clone https://github.com/ayush-rathore/inter-nerd-font $HOME/.local/share/fonts/
 
-echo "======> Copying config files"
+echo "======> Copying dotfiles"
 echo
-
-mkdir -p $HOME/.config/
 
 cp -frv \
 	../.zshenv \
-	$HOME
+	$HOME/
 
 cp -frv \
-	../btop \
-	../micro \
-	../feh \
-	../fontconfig \
-	../gtk-3.0 \
-	../lsd \
-	../mpv \
-	../neofetch \
-	../zsh \
-	../spicetify \
-	../starship.toml \
+	./.config/* \
 	$HOME/.config
 
 echo "======> Dotfiles copied!"
+
+cp -frv \
+	Pictures \
+	$HOME/
+
+echo "======> Wallpapers copied!"
