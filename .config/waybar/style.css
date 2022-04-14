@@ -11,11 +11,14 @@ window#waybar {
 	background-color: transparent;
 }
 
+#workspaces {
+	margin: 0 4px;
+}
+
 #workspaces button {
 	padding: 0 4px;
 	min-width: 20px;
-	/* color: #F06292; */
-	color: #D946EF; 
+	color: #D946EF;
 }
 
 #workspaces button.focused {
@@ -35,10 +38,12 @@ tooltip {
 	border-radius: 5px;
 }
 
+tooltip label {
+	padding: 5px;
+}
+
 #battery,
 #memory,
-#disk,
-#backlight,
 #network,
 #pulseaudio,
 #tray,
@@ -55,7 +60,7 @@ tooltip {
 
 #network {
 	color: #86EFAC;
-	font-size: 13.5px;
+	font-size: 14px;
 }
 
 #pulseaudio,
@@ -68,15 +73,11 @@ tooltip {
 }
 
 #pulseaudio.muted { 
-     font-size: 16px; 
+     font-size: 15px; 
 } 
 
 #clock { 
 	color: #4FC3F7; 
-}
-
-#workspaces {
-	margin: 0 4px;
 }
 
 @keyframes blink {
