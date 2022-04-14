@@ -1,27 +1,26 @@
 #!/bin/bash
-case $(wofi -d -L 6 -l 3 -W 100 --location=center \
+case $(wofi -d -L 5 -l 3 -W 100 --location=center \
     -D dynamic_lines=true << EOF | sed 's/^ *//'
-    Shutdown
-    Reboot
-    Log off
-    Sleep
-    Lock
-    Cancel
+   Poweroff
+   Reboot
+   Sleep
+   Lock
+   Log out
 EOF
 ) in
-    "Shutdown")
+    "  Poweroff")
         systemctl poweroff
         ;;
-    "Reboot")
+    "  Reboot")
         systemctl reboot
         ;;
-    "Sleep")
+    "  Sleep")
         systemctl suspend
         ;;
-    "Lock")
+    "   Lock")
         swaylock -f
         ;;
-    "Log off")
+    "  Log off")
         swaymsg exit
         ;;
 esac
