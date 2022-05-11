@@ -19,7 +19,7 @@
     },
     "clock": {
         "format": "{:%I:%M}",
-        "tooltip-format": "{:%a, %d %b}" 
+        "tooltip-format": "{:%a, %d %B}" 
     },
     "memory": {
          "format": "﬙{used: 0.1f}GB",
@@ -35,7 +35,6 @@
         "interval": 1,
         "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""],
-        // "format-icons": ["", "", "", "", ""],
         "format-charging": "{icon} {capacity}%",
         "format-full": "{icon} {capacity}%",
         "format-plugged": "{icon} {capacity}%"
@@ -49,7 +48,6 @@
         "tooltip-format-wifi": "{essid} {signalStrength}%",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
-        
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -62,7 +60,7 @@
             "headphone": "",
             "default": ["", "", ""]
         },
-        "tooltip": false,
+        "tooltip": true,
         "on-click": "pavucontrol"
     }
 }
