@@ -6,7 +6,7 @@ neofetch
 
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
-source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
 
 # Source Other files
 source ~/.config/zsh/functions
@@ -38,12 +38,11 @@ alias lst='l --sort=time'
 alias rf='rm -rf'
 
 # Pacman & Yay
-alias \ 
-pacin='sudo pacman -S' \
-pacrem='sudo pacman -Rns' \
-pacup='sudo pacman -Syu && sudo pacman -Sc' \
-yayup='yay -Syu && yay -Sc' \
-pacclean='sudo pacman -Qdtq | sudo pacman -Rs -'
+alias pacin='sudo pacman -S' 
+alias pacrem='sudo pacman -Rns' 
+alias pacup='sudo pacman -Syu && sudo pacman -Sc' 
+alias yayup='yay -Syu && yay -Sc' 
+alias pacclean='sudo pacman -Qdtq | sudo pacman -Rs -'
 
 # Mounting Google Drive
 alias mount='rclone mount Ayush: ~/drive'
