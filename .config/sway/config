@@ -140,8 +140,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 ## Brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
-bindsym XF86MonBrightnessDown exec light -U 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
+# bindsym XF86MonBrightnessUp exec light -A 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
+# bindsym XF86MonBrightnessDown exec light -U 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% | brightnessctl | cut -d ':' -f 2 | cut -d ' ' -f3 | grep -o '[0-9]\+' | ~/.config/sway/scripts/notify.sh brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | brightnessctl | cut -d ':' -f 2 | cut -d ' ' -f3 | grep -o '[0-9]\+' | ~/.config/sway/scripts/notify.sh brightness
 
 ## Start a terminal
 bindsym $mod+Return exec $term
@@ -174,9 +176,9 @@ bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Scr
 bindsym $mod+f exec $files 
 
 ## Start Playerctl
-bindsym Ctrl+period exec $next
-bindsym Ctrl+comma exec $previous
-bindsym Ctrl+space exec $pause
+bindsym Ctrl+Shift+period exec $next
+bindsym Ctrl+Shift+comma exec $previous
+bindsym Ctrl+Shift+space exec $pause
 
 ## Power Menu
 bindsym $mod+p exec $power
@@ -192,8 +194,8 @@ bindsym $mod+Ctrl+right exec $next-workspace-move
 bindsym $mod+Ctrl+left exec $prev-workspace-move
 
 ## Switch next/prev workspaces
-bindsym Ctrl+right workspace next_on_output
-bindsym Ctrl+left workspace prev_on_output
+bindsym Ctrl+Shift+right workspace next_on_output
+bindsym Ctrl+Shift+left workspace prev_on_output
 
 ## Cycle through workspaces
 bindsym Alt+tab workspace next_on_output
@@ -252,18 +254,12 @@ bindsym $mod+Shift+space focus mode_toggle
 ## Move focus to the parent container
 bindsym $mod+a focus parent
 
-## Resizing containers:
-mode "resize" {
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+## Scratchpad
+## Move the currently focused window to the scratchpad
+bindsym $mod+Ctrl+down move scratchpad
 
-    ## Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym Ctrl+Shift+r mode "resize"
+## Show the next scratchpad window or hide the focused scratchpad window.
+bindsym $mod+Ctrl+up scratchpad show
 
 ## Status Bar:
 bar {
