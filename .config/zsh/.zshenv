@@ -1,6 +1,6 @@
 # Exporting variables
 export TERMINAL=alacritty
-export BROWSER=google-chrome-stable
+export BROWSER=firefox
 export EDITOR=micro
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
