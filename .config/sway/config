@@ -193,8 +193,8 @@ bindsym $mod+Ctrl+right exec $next-workspace-move
 bindsym $mod+Ctrl+left exec $prev-workspace-move
 
 ## Switch next/prev workspaces
-bindsym Ctrl+Shift+right workspace next_on_output
-bindsym Ctrl+Shift+left workspace prev_on_output
+bindsym Ctrl+alt+right workspace next_on_output
+bindsym Ctrl+alt+left workspace prev_on_output
 
 ## Cycle through workspaces
 bindsym Alt+tab workspace next_on_output
@@ -216,12 +216,6 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-## Move the focused window with the same, but add Shift
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 ## Switch to workspace
 bindsym $mod+1 workspace number 1
@@ -255,10 +249,10 @@ bindsym $mod+a focus parent
 
 ## Scratchpad
 ## Move the currently focused window to the scratchpad
-bindsym $mod+Ctrl+down move scratchpad
+bindsym $mod+Shift+down move scratchpad
 
 ## Show the next scratchpad window or hide the focused scratchpad window.
-bindsym $mod+Ctrl+up scratchpad show
+bindsym $mod+Shift+up scratchpad show
 
 ## Status Bar:
 bar {
