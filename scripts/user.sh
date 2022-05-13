@@ -36,3 +36,9 @@ mkdir tmp && cd tmp
 git clone https://github.com/Manas140/paradise.git && cd paradise
 ./install.sh -d
 rm -rf tmp
+
+echo "======> Copying wallpapers"
+cd
+mkdir -p Pictures
+cd Pictures
+git clone https://gitlab.com/freaker/wallpapers Wallpapers
