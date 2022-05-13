@@ -8,6 +8,7 @@ binutils
 bison
 bluez
 bluez-utils
+brightnessctl
 btop
 dunst
 efibootmgr
@@ -42,7 +43,6 @@ libpipewire02
 libpulse
 libtool
 libva-mesa-driver
-light
 linux
 linux-firmware
 lsd
@@ -97,7 +97,6 @@ which
 wireless_tools
 wl-clipboard
 wofi
-xdg-desktop-portal
 xdg-desktop-portal-wlr
 xdg-utils
 xf86-video-amdgpu
