@@ -27,7 +27,7 @@ set $telegram telegram-desktop
 set $files nautilus
 
 ## Music
-set $music alacritty -e cmus
+set $music alacritty --class 'cmus' -e cmus
 
 ## Power
 set $power "bash ~/.config/sway/scripts/powerctrl.sh"
@@ -39,7 +39,7 @@ set $menu exec wofi --show=drun --line=7 --width=300
 set $connect alacritty -e nmtui-connect
 
 ## Bluetooth Connect
-set $bt alacritty -e ~/.config/sway/scripts/btconnect.sh
+set $bt alacritty --class 'bluetooth' -e ~/.config/sway/scripts/btconnect.sh
 
 ## Workspaces
 set $next-workspace-move ~/.config/sway/scripts/next-workspace-move-container
@@ -91,6 +91,10 @@ for_window [app_id="zathura"] exec $next-workspace-move
 
 ## Move VS Code to 3rd workspace
 for_window [class="Code"] move container to workspace number 3; workspace 3
+
+## Floating window
+for_window [app_id="cmus"] floating enable
+for_window [app_id="bluetooth"] floating enable
 
 ############################### Window ###################################     
 
