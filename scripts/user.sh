@@ -30,13 +30,6 @@ cp -frv \
 
 echo "======> Dotfiles copied!"
 
-mkdir -p $HOME/Pictures
-cp -frv \
-	Pictures \
-	$HOME/
-
-echo "======> Wallpapers copied!"
-
 echo "======> Installing GTK theme"
 mkdir -p $HOME/.themes
 mkdir tmp && cd tmp
