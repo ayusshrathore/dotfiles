@@ -47,6 +47,8 @@ tooltip label {
 #network,
 #pulseaudio,
 #tray,
+#custom-media,
+#custom-spotify,
 #window {
  	padding: 0 5px;
     margin: 1px 1px;
@@ -78,6 +80,11 @@ tooltip label {
 
 #clock { 
 	color: #4FC3F7; 
+}
+
+#custom-media,
+#custom-spotify {
+	color: #2ECC71;
 }
 
 @keyframes blink {
