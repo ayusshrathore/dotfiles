@@ -1,4 +1,4 @@
-@import "colorschemes/basic.css";
+@import "colorschemes/default.css";
 
 * {
 	border: none;
@@ -20,11 +20,11 @@ window#waybar {
 #workspaces button {
 	padding: 0 4px;
 	min-width: 20px;
-	color: @base05;
+	color: @base04;
 }
 
 #workspaces button.focused {
-	color: @base04;
+	color: @base0D;
 }
 
 #workspaces button.urgent {
