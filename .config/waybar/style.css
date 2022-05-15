@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "Inter Nerd Font";
+	font-family: "Inter Nerd Font", "icomoon-feather";
 	font-size: 13px;
 	font-weight: bold; 
 	min-height: 0;
@@ -62,7 +62,6 @@ tooltip label {
 
 #network {
 	color: #86EFAC;
-	font-size: 14px;
 }
 
 #pulseaudio,
@@ -73,10 +72,6 @@ tooltip label {
 #memory {
 	color: #FFEE58;
 }
-
-#pulseaudio.muted { 
-     font-size: 15px; 
-} 
 
 #clock { 
 	color: #4FC3F7; 

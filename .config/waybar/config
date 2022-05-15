@@ -54,7 +54,7 @@
 
     // Network
     "network": {
-        "format-wifi": "",
+        "format-wifi": "",
         "format-ethernet": "",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "No Internet!",
@@ -66,10 +66,10 @@
 
     // Pulseaudio
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "<span font='11'>{icon}</span> {volume}%",
         "format-bluetooth": " {volume}%",
-        "format-bluetooth-muted": "{format_source}",
-        "format-muted": "{format_source}",
+        "format-bluetooth-muted": "<span font='11'>{format_source}</span>",
+        "format-muted": "<span font='11'>{format_source}</span>",
 		"format-source": "",
 		"format-source-muted": "",
         "format-icons": {
@@ -82,15 +82,15 @@
 
     // Custom Module for playback
     "custom/media": {
-          	  	  "format": "{icon}{}",
-          	  	  "format-icons": {
-          	  	  	"Paused": "<span font='11'> </span>",
-          	  	  	"Playing": "<span font='11'> </span>"
-          	  	  },
-          	  	  "return-type": "json",
-          	  	  "max-length": 50,
-          	  	  "on-click": "playerctl play-pause",
-          	  	  "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+     	  	  "format": "{icon}{}",
+       	  	  "format-icons": {
+     	  	  "Paused": "<span font='11'> </span>",
+        	  "Playing": "<span font='11'> </span>"
+        	  },
+        	  "return-type": "json",
+        	  "max-length": 50,
+        	  "on-click": "playerctl play-pause",
+        	  "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{s						tatus}}\", \"class\": \"{{status}}\"}' -F"
           	  },
           	  
     "custom/spotify": {
@@ -102,6 +102,6 @@
               "return-type": "json",
               "max-length":30,
               "on-click": "playerctl play-pause",
-              "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+              "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}						\", \"class\": \"{{status}}\"}' -F"
           },         	  
 }
