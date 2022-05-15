@@ -1,3 +1,5 @@
+@import "colorschemes/basic.css";
+
 * {
 	border: none;
 	border-radius: 0;
@@ -18,15 +20,15 @@ window#waybar {
 #workspaces button {
 	padding: 0 4px;
 	min-width: 20px;
-	color: #D946EF;
+	color: @base05;
 }
 
 #workspaces button.focused {
-	color: #42a5f5;
+	color: @base04;
 }
 
 #workspaces button.urgent {
-	color: #E57373;
+	color: @base01;
 }
 
 #workspaces button:hover {
@@ -34,7 +36,7 @@ window#waybar {
 }
 
 tooltip { 
-	background-color: #262626;
+	background-color: @base00;
 	border-radius: 5px;
 }
 
@@ -57,29 +59,29 @@ tooltip label {
 #battery,
 #battery.charging,
 #battery.plugged {
-	color: #E879F9;
+	color: @base05;
 }
 
 #network {
-	color: #86EFAC;
+	color: @base02;
 }
 
 #pulseaudio,
 #pulseaudio.muted {
-	color: #F48FB1;
+	color: @base0D;
 }
 
 #memory {
-	color: #FFEE58;
+	color: @base03;
 }
 
 #clock { 
-	color: #4FC3F7; 
+	color: @base04; 
 }
 
 #custom-media,
 #custom-spotify {
-	color: #2ECC71;
+	color: @base0A;
 }
 
 @keyframes blink {
@@ -90,7 +92,7 @@ tooltip label {
 }
 
 #battery.critical:not(.charging) {
-	background-color: #f53c3c;
+	background-color: @base01;
 	color: #ffffff;
 	animation-name: blink;
 	animation-duration: 0.5s;
