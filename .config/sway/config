@@ -30,16 +30,17 @@ set $files nautilus
 set $music alacritty --class 'cmus' -e cmus
 
 ## Power
-set $power "bash ~/.config/sway/scripts/powerctrl.sh"
+set $power "bash ~/.config/wofi/scripts/power/power.sh"
 
 ## Menu
-set $menu exec wofi --show=drun --line=7 --width=300
+set $menu exec wofi --show=drun --line=5 --width=600 --columns=2 --hide-scroll --sort-order=alphabetical
 
 ## Network Connect
 set $connect alacritty -e nmtui-connect
 
 ## Bluetooth Connect
-set $bt alacritty --class 'bluetooth' -e ~/.config/sway/scripts/btconnect.sh
+# set $bt alacritty --class 'bluetooth' -e ~/.config/sway/scripts/btconnect.sh
+set $bluetooth "bash ~/.config/wofi/scripts/bluetooth/bluetooth.sh"
 
 ## Workspaces
 set $next-workspace-move ~/.config/sway/scripts/next-workspace-move-container
@@ -91,10 +92,12 @@ for_window [app_id="zathura"] exec $next-workspace-move
 
 ## Move VS Code to 3rd workspace
 for_window [class="Code"] move container to workspace number 3; workspace 3
+for_window [app_id="Code"] move container to workspace number 3; workspace 3
 
 ## Floating window
 for_window [app_id="cmus"] floating enable
 for_window [app_id="bluetooth"] floating enable
+for_window [app_id="telegramdesktop"] floating enable
 
 ############################### Window ###################################     
 
@@ -120,18 +123,16 @@ output * bg ~/Pictures/Wallpapers/01.jpg fill
 ##################################### Config ###########################
 
 ## Font config
-font pango: Inter:style=Regular 10.5
+font pango:Ubuntu 11
 
 ## Touchpad Config
- input "1267:91:Elan_Touchpad" {
+ input * {
 	natural_scroll enabled
 	tap enabled
   }
   
 ## Keyboard Config 
-  input "1:1:AT_Translated_Set_2_keyboard" {
-  	xkb_numlock enabled
-  }
+  input * xkb_numlock enable
   
 ## Swap caps & escape key
 	input * {
@@ -200,7 +201,7 @@ bindsym $mod+m exec $music
 bindsym $mod+n exec $connect
 
 ## BT Connect
-bindsym $mod+b exec $bt
+bindsym $mod+b exec $bluetooth
 
 ## Move windows to next/prev workspaces
 bindsym $mod+Ctrl+right exec $next-workspace-move 
