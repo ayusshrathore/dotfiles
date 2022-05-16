@@ -82,26 +82,26 @@
 
     // Custom Module for playback
     "custom/media": {
-     	  	  "format": "{icon}{}",
-       	  	  "format-icons": {
-     	  	  "Paused": "<span font='11'> </span>",
-        	  "Playing": "<span font='11'> </span>"
-        	  },
-        	  "return-type": "json",
-        	  "max-length": 50,
-        	  "on-click": "playerctl play-pause",
-        	  "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{s						tatus}}\", \"class\": \"{{status}}\"}' -F"
-          	  },
+        	          "format": "{icon}{}",
+        	          "format-icons": {
+        	            "Paused": "",
+        	            "Playing": ""
+        	          },
+        	          "return-type": "json",
+        	          "max-length":30,
+        	          "on-click": "playerctl play-pause",
+        	          "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+          	      },
           	  
     "custom/spotify": {
-              "format": "{icon}{}",
-              "format-icons": {
-              	"Paused": "<span font='11'> </span>",
-              	"Playing": "<span font='11'> </span>"
-       	      },
-              "return-type": "json",
-              "max-length":30,
-              "on-click": "playerctl play-pause",
-              "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}						\", \"class\": \"{{status}}\"}' -F"
-          },         	  
+                    "format": "{icon}{}",
+                    "format-icons": {
+                      "Paused": "<span font='11'> </span>",
+                      "Playing": "<span font='11'> </span>"
+                     },
+                    "return-type": "json",
+                    "max-length":30,
+                    "on-click": "playerctl play-pause",
+                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+                }     	  
 }
