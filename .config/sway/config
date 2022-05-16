@@ -1,3 +1,6 @@
+## Include Colorscheme
+include "colorschemes/everforest"
+
 ################################# Variables ##############################
 
 ## Logo key. Use Mod1 for Alt.
@@ -92,7 +95,7 @@ for_window [app_id="zathura"] exec $next-workspace-move
 
 ## Move VS Code to 3rd workspace
 for_window [class="Code"] move container to workspace number 3; workspace 3
-for_window [app_id="Code"] move container to workspace number 3; workspace 3
+# for_window [app_id="Code"] move container to workspace number 3; workspace 3
 
 ## Floating window
 for_window [app_id="cmus"] floating enable
@@ -112,12 +115,12 @@ smart_borders off
 
 ## Window decoration
 ## class            	  border   backgr.   text     indicator  child_border
-client.focused     		  #404040  #404040   #f0f0f0  #404040    #404040
-client.unfocused   		  #212121  #212121   #f0f0f0  #212121    #212121
-client.focused_inactive   #212121  #212121   #f0f0f0  #212121    #212121
+client.focused     		  $base02  $base02   $base07  $base02    $base02
+client.unfocused   		  $base06  $base00   $base07  $base00    $base00
+client.focused_inactive   $base06  $base00   $base07  $base00    $base00
 
 ## Wallpaper
-output * bg ~/Pictures/Wallpapers/01.jpg fill
+output * bg ~/Pictures/Wallpapers/10.jpg fill
 
 
 ##################################### Config ###########################

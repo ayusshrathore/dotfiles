@@ -6,10 +6,10 @@
 @define-color base04 #4FC3F7; /* Blue */
 @define-color base05 #E879F9; /* Magenta */ 
 @define-color base06 #039be5; /* Cyan */
-@define-color base07 #EAEAEA; /* White */
+@define-color base07 #F0F0F0; /* White */
 
 /* Bright Colors */
-@define-color base08 #666666; /* Black */
+@define-color base08 #404040; /* Black */
 @define-color base09 #EF4444; /* Red */
 @define-color base0A #2ECC71; /* Green */
 @define-color base0B #F1C40F; /* Yellow */

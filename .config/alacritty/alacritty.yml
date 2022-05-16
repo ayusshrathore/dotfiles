@@ -49,30 +49,56 @@ font:
         y: 0
 
 # Colors (Tomorrow Night)
-colors:
+schemes:
     # Default colors
-    primary:
-        background: '#151515'
-        foreground: '#E8E3E3'
+    default: &default
+        primary:
+            background: '#151515'
+            foreground: '#E8E3E3'
 
-    # Normal colors
-    normal:
-        black: "#1d1f21"
-        red: "#EF4444"
-        green: "#2ecc71"
-        yellow: "#f1c40f"
-        blue: "#039be5"
-        magenta: "#a347ba"
-        cyan: "#039be5"
-        white: "#eaeaea"
+        # Normal colors
+        normal:
+            black: "#1d1f21"
+            red: "#EF4444"
+            green: "#2ecc71"
+            yellow: "#f1c40f"
+            blue: "#039be5"
+            magenta: "#a347ba"
+            cyan: "#039be5"
+            white: "#eaeaea"
 
-    # Bright colors
-    bright:
-        black: "#666666"
-        red: "#EF4444"
-        green: "#2ecc71"
-        yellow: "#f1c40f"
-        blue: "#039be5"
-        magenta: "#a347ba"
-        cyan: "#039be5"
-        white: "#ffffff"
+        # Bright colors
+        bright:
+            black: "#666666"
+            red: "#EF4444"
+            green: "#2ecc71"
+            yellow: "#f1c40f"
+            blue: "#039be5"
+            magenta: "#a347ba"
+            cyan: "#039be5"
+            white: "#ffffff"
+
+    everforest: &everforest
+        primary:
+          background: '#2b3339'
+          foreground: '#d3c6aa'
+        normal:
+          black:   '#4b565c'
+          red:     '#e67e80'
+          green:   '#a7c080'
+          yellow:  '#dbbc7f'
+          blue:    '#7fbbb3'
+          magenta: '#d699b6'
+          cyan:    '#83c092'
+          white:   '#d3c6aa'
+        bright:
+          black:   '#4b565c'
+          red:     '#e67e80'
+          green:   '#a7c080'
+          yellow:  '#dbbc7f'
+          blue:    '#7fbbb3'
+          magenta: '#d699b6'
+          cyan:    '#83c092'
+          white:   '#d3c6aa'
+         
+colors: *everforest

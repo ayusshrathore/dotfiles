@@ -1,4 +1,4 @@
-@import "colorschemes/default.css";
+@import "colorschemes/everforest.css";
 
 * {
 	border: none;
@@ -68,7 +68,7 @@ tooltip label {
 
 #pulseaudio,
 #pulseaudio.muted {
-	color: @base0D;
+	color: @base01;
 }
 
 #memory {
