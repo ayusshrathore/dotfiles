@@ -6,13 +6,13 @@ case $(wofi -d -w 3 -H 100 --location=center --conf=$HOME/.config/wofi/scripts/c
  
 EOF
 ) in
-    "")
+    "")
         systemctl poweroff
         ;;
-    "")
+    "")
         systemctl reboot
         ;;
-    "")
+    "")
         swaylock -f
         ;;
 esac
