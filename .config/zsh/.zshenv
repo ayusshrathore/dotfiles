@@ -32,3 +32,7 @@ export SAVEHIST=1000
 
 # Micro
 export MICRO_TRUECOLOR=1
+
+# Spicetify
+export SPICETIFY_INSTALL="/home/freaker/.spicetify"
+export PATH="$PATH:/home/freaker/.spicetify"
