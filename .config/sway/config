@@ -1,5 +1,5 @@
 ## Include Colorscheme
-include "colorschemes/everforest"
+include "colorschemes/default"
 
 ################################# Variables ##############################
 
@@ -95,12 +95,13 @@ for_window [app_id="zathura"] exec $next-workspace-move
 
 ## Move VS Code to 3rd workspace
 for_window [class="Code"] move container to workspace number 3; workspace 3
-# for_window [app_id="Code"] move container to workspace number 3; workspace 3
+for_window [app_id="Code"] move container to workspace number 3; workspace 3
 
 ## Floating window
 for_window [app_id="cmus"] floating enable
-for_window [app_id="bluetooth"] floating enable
 for_window [app_id="telegramdesktop"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Spotify"] floating enable
 
 ############################### Window ###################################     
 
@@ -115,12 +116,12 @@ smart_borders off
 
 ## Window decoration
 ## class            	  border   backgr.   text     indicator  child_border
-client.focused     		  $base02  $base02   $base07  $base02    $base02
+client.focused     		  $base08  $base08   $base07  $base08    $base08
 client.unfocused   		  $base06  $base00   $base07  $base00    $base00
 client.focused_inactive   $base06  $base00   $base07  $base00    $base00
 
 ## Wallpaper
-output * bg ~/Pictures/Wallpapers/10.jpg fill
+output * bg ~/Pictures/Wallpapers/07.jpg fill
 
 
 ##################################### Config ###########################
@@ -154,9 +155,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 ## Brightness controls
-# bindsym XF86MonBrightnessUp exec light -A 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
-# bindsym XF86MonBrightnessDown exec light -U 5 | light | cut -d '.' -f 1 | ~/.config/sway/scripts/notify.sh brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +5% | brightnessctl | cut -d ':' -f 2 | cut -d ' ' -f3 | grep -o '[0-9]\+' | ~/.config/sway/scripts/notify.sh brightness
+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | brightnessctl | cut -d ':' -f 2 | cut -d ' ' -f3 | grep -o '[0-9]\+' | ~/.config/sway/scripts/notify.sh brightness
 
 ## Start a terminal
