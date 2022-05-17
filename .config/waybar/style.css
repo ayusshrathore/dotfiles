@@ -1,4 +1,4 @@
-@import "colorschemes/everforest.css";
+@import "colorschemes/default.css";
 
 * {
 	border: none;
@@ -28,7 +28,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-	color: @base01;
+	color: @base09;
 }
 
 #workspaces button:hover {
@@ -68,7 +68,7 @@ tooltip label {
 
 #pulseaudio,
 #pulseaudio.muted {
-	color: @base01;
+	color: @base09;
 }
 
 #memory {
@@ -95,7 +95,7 @@ tooltip label {
 	background-color: @base01;
 	color: #ffffff;
 	animation-name: blink;
-	animation-duration: 0.5s;
+	animation-duration: 0.8s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;

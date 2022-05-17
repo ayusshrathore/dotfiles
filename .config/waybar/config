@@ -102,6 +102,6 @@
                     "return-type": "json",
                     "max-length":30,
                     "on-click": "playerctl play-pause",
-                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
                 }     	  
 }
