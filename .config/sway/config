@@ -57,9 +57,6 @@ exec autotiling-rs
 ## Enable xwayland support
 xwayland enable
 
-## Enables inhibit_idle when playing audio
-exec sway-audio-idle-inhibit
-
 ## GTK Settings
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -101,7 +98,6 @@ for_window [app_id="Code"] move container to workspace number 3; workspace 3
 for_window [app_id="cmus"] floating enable
 for_window [app_id="telegramdesktop"] floating enable
 for_window [class="feh"] floating enable
-for_window [class="Spotify"] floating enable, resize set 1100 620
 
 ############################### Window ###################################     
 
@@ -179,9 +175,6 @@ bindsym $mod+v exec $code
 
 ## Start Telegram
 bindsym $mod+t exec $telegram
-
-## Start Spotify
-bindsym $mod+s exec spotify
 
 ## Screenshot
 bindsym Print exec grim ~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png && notify-send "Screenshot captured!"	  

@@ -18,7 +18,6 @@ yay -S \
 	nerd-fonts-jetbrains-mono \
 	ponymix \
 	spotify \
-	sway-audio-idle-inhibit-git \
 	ttf-font-logos \
 	ttf-icomoon-feather \
 	visual-studio-code-bin
