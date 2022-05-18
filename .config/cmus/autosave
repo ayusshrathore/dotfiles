@@ -46,7 +46,7 @@ set color_win_title_attr=default
 set color_win_title_bg=234
 set color_win_title_fg=45
 set confirm_run=true
-set continue=false
+set continue=true
 set continue_album=true
 set device=/dev/cdrom
 set display_artist_sort_name=false
@@ -58,7 +58,7 @@ set follow=false
 set format_current=
 set format_playlist=%t%= %d
 set format_playlist_va=
-set format_statusline=  %{status} %t%= %1{follow}%1{repeat}%1{shuffle} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} 
+set format_statusline=%{status} %t%= %1{follow}%1{repeat}%1{continue}%1{shuffle} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} 
 set format_title=%a - %l - %t (%y)
 set format_trackwin=%f%= %y
 set format_trackwin_album= %l %= %{albumduration} 
