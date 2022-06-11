@@ -2,9 +2,9 @@
     "height": 30,
 
     // Modules
-    "modules-left": ["sway/workspaces", "custom/media", "custom/spotify"],
+    "modules-left": ["sway/workspaces", "sway/window", "custom/media", "custom/spotify"],
     "modules-center": ["clock"],
-    "modules-right": [ "tray", "network", "memory", "pulseaudio", "battery"],
+    "modules-right": [ "tray", "network", "memory", "bluetooth", "pulseaudio", "backlight", "battery"],
 
     // Workspaces
     "sway/workspaces": {
@@ -15,6 +15,23 @@
             "urgent": "",
             "default": "",
             "focused": "",
+         }
+     },
+
+	// Window
+     "sway/window": {
+         "format": "{}",
+         "max-length": 25,
+         "rewrite": {
+            "Mozilla Firefox": "  Firefox",
+            "Alacritty": "  Alacritty",
+            "Telegram": "  Telegram",
+            "Google Chrome": "  Chrome",
+            "Visual Studio Code": "﬏",
+            "(.*) — Mozilla Firefox": "  $1",
+            "(.*) - Google Chrome": "  $1",
+			"(.*) - mpv": "  $1",
+			"(.*) - Visual Studio Code": "﬏  $1"
          }
      },
 
@@ -54,14 +71,16 @@
 
     // Network
     "network": {
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "No Internet!",
+        "format-wifi":"  {essid}",
+       	"format-ethernet": "",
+       	"format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "No IP!",
+        "interval": 1,
         "tooltip-format": "{ifname}",
-        "tooltip-format-wifi": "{essid} {signalStrength}%",
-        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-wifi": "U: {bandwidthUpBytes}  D: {bandwidthDownBytes}",
+        "tooltip-format-ethernet": "{ifname} U: {bandwidthUpBytes}, D: {bandwidthDownBytes}",
         "tooltip-format-disconnected": "Disconnected",
+        // {signalStrength}%
     },
 
     // Pulseaudio
@@ -80,6 +99,23 @@
         "on-click": "pavucontrol"
     },
 
+	// Bluetooth
+    "bluetooth": {
+          "format":" {status}",
+          "format-connected": " {device_battery_percentage}%",
+          "tooltip-format": "{controller_alias}",
+          "tooltip-format-connected": "{device_enumerate}",
+          "tooltip-format-enumerate-connected": "{device_alias}",
+          "tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%",
+        },
+        
+	// Backlight
+    "backlight": {
+        "device": "",
+        "format": " {icon} {percent}%",
+        "format-icons": ["","", "", ""]
+    },
+
     // Custom Module for playback
     "custom/media": {
         	          "format": "{icon}{}",
@@ -88,9 +124,9 @@
         	            "Playing": ""
         	          },
         	          "return-type": "json",
-        	          "max-length":30,
+        	          "max-length": 30,
         	          "on-click": "playerctl play-pause",
-        	          "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+        	          "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
           	      },
           	  
     "custom/spotify": {
@@ -100,8 +136,8 @@
                       "Playing": "<span font='11'> </span>"
                      },
                     "return-type": "json",
-                    "max-length":30,
+                    "max-length": 30,
                     "on-click": "playerctl play-pause",
-                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
                 }     	  
 }

@@ -13,6 +13,10 @@ window#waybar {
 	background-color: transparent;
 }
 
+#waybar.empty #window {
+	padding: 0;
+}
+
 #workspaces {
 	margin: 0 4px;
 }
@@ -36,8 +40,9 @@ window#waybar {
 }
 
 tooltip { 
-	background-color: @base00;
+	background-color: #5BB462;
 	border-radius: 5px;
+	color: @base00;
 }
 
 tooltip label {
@@ -49,10 +54,12 @@ tooltip label {
 #network,
 #pulseaudio,
 #tray,
+#bluetooth,
+#backlight,
 #custom-media,
 #custom-spotify,
 #window {
- 	padding: 0 5px;
+ 	padding: 0 4px;
     margin: 1px 1px;
 }
 
@@ -75,8 +82,8 @@ tooltip label {
 	color: @base03;
 }
 
-#clock { 
-	color: @base04; 
+#clock, #bluetooth { 
+	color: @base04;
 }
 
 #custom-media,
