@@ -1,7 +1,7 @@
 ## Include Colorscheme
 include "colorschemes/default"
 
-################################# Variables ##############################
+################################# Variables ###########################
 
 	## Logo key. Use Mod1 for Alt.
 	set $mod Mod4
@@ -49,7 +49,7 @@ include "colorschemes/default"
 	set $next-workspace-move ~/.config/sway/scripts/next-workspace-move-container
 	set $prev-workspace-move ~/.config/sway/scripts/prev-workspace-move-container
 
-################################## Autostart ###############################
+################################## Autostart ###########################
 
 	## Autotiling
 	exec autotiling-rs
@@ -78,7 +78,7 @@ include "colorschemes/default"
 	    before-sleep 'playerctl pause' \
 	  	before-sleep 'swaylock -f'
 
-################################## Rules ####################################
+################################## Rules ###############################
 
 	## Enable inhibit_idle when app is in fullscreen
 	for_window [class=".*"] inhibit_idle fullscreen
@@ -98,10 +98,11 @@ include "colorschemes/default"
 	for_window [app_id="cmus"] floating enable
 	for_window [app_id="telegramdesktop"] floating enable
 	for_window [app_id="org.gnome.Nautilus"] floating enable
-	for_window [class="feh"] floating enable
+	# for_window [class="feh"] floating enable
+	for_window [class="Spotify"] floating enable, resize set 1100 620
 	for_window [title="Firefox — Sharing Indicator"] floating enable
 
-############################### Window ###################################     
+############################### Window #################################   
 
 	## Configure gaps between windows
 	gaps inner 5
@@ -119,7 +120,7 @@ include "colorschemes/default"
 	client.focused_inactive   $base06  $base00   $base07  $base00    $base00
 
 	## Wallpaper
-	output * bg ~/Pictures/Wallpapers/07.jpg fill
+	output * bg ~/Pictures/Wallpapers/16.jpg fill
 
 ##################################### Config ###########################
 
@@ -263,10 +264,10 @@ include "colorschemes/default"
 
 	## Scratchpad
 	## Move the currently focused window to the scratchpad
-	bindsym $mod+Shift+down move scratchpad
+	bindsym $mod+Shift+s move scratchpad
 
 	## Show the next scratchpad window or hide the focused scratchpad window.
-	bindsym $mod+Shift+up scratchpad show
+	bindsym $mod+s scratchpad show
 
 ## Status Bar:
 	bar {
