@@ -9,7 +9,11 @@
 	min-height: 0;
 }
 
-window#waybar { 
+#window {
+	padding: 0 5px;
+}
+
+window#waybar {
 	background-color: transparent;
 }
 
@@ -28,11 +32,15 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	color: @base0D;
+	color: @base09;
 }
 
 #workspaces button.urgent {
-	color: @base09;
+	color: @base01;
+}
+
+#workspaces button.persistent {
+	color: #BDBDBD;
 }
 
 #workspaces button:hover {
@@ -56,9 +64,9 @@ tooltip label {
 #tray,
 #bluetooth,
 #backlight,
+#clock,
 #custom-media,
-#custom-spotify,
-#window {
+#custom-spotify {
  	padding: 0 4px;
     margin: 1px 1px;
 }
@@ -84,6 +92,10 @@ tooltip label {
 
 #clock, #bluetooth { 
 	color: @base04;
+}
+
+#backlight {
+	color: @base0B;
 }
 
 #custom-media,
