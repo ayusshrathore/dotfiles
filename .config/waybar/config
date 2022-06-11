@@ -2,12 +2,23 @@
     "height": 30,
 
     // Modules
-    "modules-left": ["sway/workspaces", "sway/window", "custom/media", "custom/spotify"],
-    "modules-center": ["clock"],
-    "modules-right": [ "tray", "network", "memory", "bluetooth", "pulseaudio", "backlight", "battery"],
+    // "modules-left": ["sway/workspaces", "sway/window", "custom/media", "custom/spotify"],
+    // "modules-center": ["clock"],
+    // "modules-right": ["custom/scratchpad_indicator", "tray", "network", "memory", "bluetooth", "pulseaudio", "backlight", "battery"],
+
+    "modules-left": ["sway/window", "custom/media", "custom/spotify"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["custom/scratchpad_indicator", "tray", "network", "memory", "bluetooth", "pulseaudio", "backlight", "battery", "clock"],
 
     // Workspaces
     "sway/workspaces": {
+    	"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		 },	
          "disable-scroll": true,
          "all-outputs": true,
          "format": "{icon}",
@@ -24,10 +35,11 @@
          "max-length": 25,
          "rewrite": {
             "Mozilla Firefox": "  Firefox",
-            "Alacritty": "  Alacritty",
+            "Alacritty": "<span font='11'> </span> Terminal",
             "Telegram": "  Telegram",
-            "Google Chrome": "  Chrome",
-            "Visual Studio Code": "﬏",
+            "Google Chrome": "  Google Chrome",
+            "Visual Studio Code": "﬏  Code",
+            "Telegram (.*)": "  Telegram $1",
             "(.*) — Mozilla Firefox": "  $1",
             "(.*) - Google Chrome": "  $1",
 			"(.*) - mpv": "  $1",
@@ -102,12 +114,16 @@
 	// Bluetooth
     "bluetooth": {
           "format":" {status}",
+          "format-on": "",
+          "format-off": "<span font='11'></span>",
           "format-connected": " {device_battery_percentage}%",
           "tooltip-format": "{controller_alias}",
           "tooltip-format-connected": "{device_enumerate}",
           "tooltip-format-enumerate-connected": "{device_alias}",
           "tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%",
-        },
+          "on-click": "bluetoothctl power on",
+          "on-click-right": "bluetoothctl power off"
+     },
         
 	// Backlight
     "backlight": {
@@ -116,28 +132,37 @@
         "format-icons": ["","", "", ""]
     },
 
+	// Scratchpad
+    "custom/scratchpad_indicator": {
+    		"interval": 1,
+    		"exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 1)'",
+    		"format": "  ",
+    		"on-click": "swaymsg 'scratchpad show'",
+    		"on-click-right": "swaymsg 'move scratchpad'"
+    	},
+
     // Custom Module for playback
     "custom/media": {
-        	          "format": "{icon}{}",
-        	          "format-icons": {
-        	            "Paused": "",
-        	            "Playing": ""
-        	          },
-        	          "return-type": "json",
-        	          "max-length": 30,
-        	          "on-click": "playerctl play-pause",
-        	          "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
-          	      },
+        "format": "{icon}{}",
+        "format-icons": {
+          "Paused": "",
+          "Playing": ""
+        },
+        "return-type": "json",
+        "max-length": 30,
+        "on-click": "playerctl play-pause",
+        "exec": "playerctl --ignore-player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+   	},
           	  
     "custom/spotify": {
-                    "format": "{icon}{}",
-                    "format-icons": {
-                      "Paused": "<span font='11'> </span>",
-                      "Playing": "<span font='11'> </span>"
-                     },
-                    "return-type": "json",
-                    "max-length": 30,
-                    "on-click": "playerctl play-pause",
-                    "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
-                }     	  
+       "format": "{icon}{}",
+       "format-icons": {
+         "Paused": "<span font='11'> </span>",
+         "Playing": "<span font='11'> </span>"
+        },
+       "return-type": "json",
+       "max-length": 30,
+       "on-click": "playerctl play-pause",
+       "exec": "playerctl --player=spotify metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+   	}
 }
