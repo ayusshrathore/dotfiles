@@ -71,6 +71,14 @@ gmnf='git merge --no-commit --no-ff' \
 gr='git restore' \
 grs='git restore --staged'
 
+# Git Fuzzy
+alias \
+gfs="git fuzzy status" \
+gfb="git fuzzy branch" \
+gfst="git fuzzy stash" \
+gfd="git fuzzy diff" \
+gfpr="git fuzzy pr"
+
 # Network Manager
 alias \
 nmcon='nmcli device wifi connect' \
