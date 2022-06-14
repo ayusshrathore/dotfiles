@@ -20,4 +20,5 @@ yay -S \
 	spotify \
 	ttf-font-logos \
 	ttf-icomoon-feather \
+	ttf-material-design-icons-git \
 	visual-studio-code-bin

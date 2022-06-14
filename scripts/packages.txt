@@ -25,7 +25,6 @@ gcc
 gettext
 git
 github-cli
-gnome-disk-utility
 gnome-keyring
 grep
 grim
@@ -100,6 +99,5 @@ wofi
 xdg-desktop-portal-wlr
 xdg-utils
 xf86-video-amdgpu
-xf86-video-ati
 xorg-xwayland
 zsh
