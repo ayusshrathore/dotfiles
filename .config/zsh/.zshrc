@@ -16,6 +16,8 @@ source ~/.config/zsh/settings.zsh
 
 # zshrc 
 alias zrc='$EDITOR ~/.config/zsh/.zshrc'
+alias swayc='$EDITOR ~/.config/sway/config'
+alias wayc='$EDITOR ~/.config/waybar/config'
 
 # cd .config
 alias cdc='cd ~/.config/'
@@ -45,7 +47,7 @@ alias yayup='yay -Syu && yay -Sc'
 alias pacclean='sudo pacman -Qdtq | sudo pacman -Rs -'
 
 # Mounting Google Drive
-alias mount='rclone mount Ayush: ~/drive'
+alias md='rclone mount Ayush: ~/Drive'
 
 # VS Code
 alias code='code .'
@@ -84,3 +86,10 @@ alias \
 nmcon='nmcli device wifi connect' \
 nmls='nmcli device wifi list' \
 nmst='nmcli device status'
+
+# Bluetooth Manager
+alias \
+	bton='bluetoothctl power on' \
+	btoff='bluetoothctl power off' \
+	btls='bluetoothctl devices' \
+	btcon='bluetoothctl connect' 
