@@ -3,7 +3,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "Inter Nerd Font", "icomoon-feather";
+	font-family: "Inter Nerd Font", "icomoon-feather", "Material-Design-Icons";
 	font-size: 13px;
 	font-weight: bold; 
 	min-height: 0;
@@ -14,7 +14,9 @@
 }
 
 window#waybar {
-	background-color: transparent;
+	/* background-color: transparent; */
+	background-color: #27272A;
+	opacity: 0.9;
 }
 
 #waybar.empty #window {
@@ -27,7 +29,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 4px;
-	min-width: 20px;
+	min-width: 20px; 
 	color: @base04;
 }
 
@@ -100,7 +102,8 @@ tooltip label {
 
 #custom-media,
 #custom-spotify {
-	color: @base0A;
+	/* color: @base0A; */
+	color: #4ADE80;
 }
 
 @keyframes blink {

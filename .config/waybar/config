@@ -22,11 +22,16 @@
          "disable-scroll": true,
          "all-outputs": true,
          "format": "{icon}",
+         // "format-icons": {
+         //   "urgent": "",
+         //   "default": "",
+         //   "focused": "",
+         // }
          "format-icons": {
-            "urgent": "",
-            "default": "",
-            "focused": "",
-         }
+               "urgent": "<span font='11'></span>",
+               "focused": "<span font='11'>󰮯</span>",
+               "default": "<span font='11'></span>"
+             }
      },
 
 	// Window
@@ -42,7 +47,7 @@
             "Telegram (.*)": "  Telegram $1",
             "(.*) — Mozilla Firefox": "  $1",
             "(.*) - Google Chrome": "  $1",
-			"(.*) - mpv": "  $1",
+			"(.*) - mpv": "󱜕  $1",
 			"(.*) - Visual Studio Code": "﬏  $1"
          }
      },
