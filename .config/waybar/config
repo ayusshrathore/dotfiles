@@ -8,7 +8,7 @@
 
     "modules-left": ["sway/window", "custom/media", "custom/spotify"],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["custom/scratchpad_indicator", "tray", "network", "memory", "bluetooth", "pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["custom/scratchpad_indicator", "tray", "network", "memory", "bluetooth", "pulseaudio", "battery", "clock"],
 
     // Workspaces
     "sway/workspaces": {
@@ -43,12 +43,22 @@
             "Alacritty": "<span font='11'> </span> Terminal",
             "Telegram": "  Telegram",
             "Google Chrome": "  Google Chrome",
-            "Visual Studio Code": "﬏  Code",
+            "Visual Studio Code": "<span font='11'>󰨞 </span>Code",
             "Telegram (.*)": "  Telegram $1",
+            "Home": "<span font='11'>󰋞 </span>Home",
+            "Documents": "<span font='11'>󰈙 </span>Documents ",
+            "Downloads": "<span font='11'>󰇚 </span>Downloads",
+            "Drive": "<span font='11'>󰊶 </span>Drive",
+            "Music": "<span font='11'>󰝚 </span>Music",
+            "Pictures": "<span font='11'>󰋩 </span>Pictures",
+			"GitHub": "<span font='11'>󰊤 </span>GitHub",
+			"GitLab": "<span font='11'>󰮠 </span>GitLab",
+			"Movies": "<span font='11'>󰕧 </span>Movies",
+			"Trash": "<span font='11'>󰩹 </span>Trash",
             "(.*) — Mozilla Firefox": "  $1",
             "(.*) - Google Chrome": "  $1",
 			"(.*) - mpv": "󱜕  $1",
-			"(.*) - Visual Studio Code": "﬏  $1"
+			"(.*) - Visual Studio Code": "<span font='11'>󰨞 </span>$1"
          }
      },
 
