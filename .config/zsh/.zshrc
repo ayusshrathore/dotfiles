@@ -7,6 +7,7 @@ neofetch
 # Source plugins
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/fzf-tab/fzf-tab.plugin.zsh
 
 # Source Other files
 source ~/.config/zsh/functions
@@ -32,7 +33,7 @@ alias ..='cd ..'
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
-alias lla='ls -la'
+alias ll='ls -la'
 alias lt='ls --tree'
 alias lst='l --sort=time'
 
