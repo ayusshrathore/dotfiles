@@ -9,6 +9,8 @@ fi
 mkdir /etc/bluetooth
 cp -fv system-configs/main.conf /etc/bluetooth/
 
+cp -fv system-configs/vsftpd.conf /etc/
+
 # Start Network Manager
 systemctl enable NetworkManager
 
