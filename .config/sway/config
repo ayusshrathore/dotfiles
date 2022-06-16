@@ -41,10 +41,6 @@ include "colorschemes/default"
 	## Network Connect
 	set $connect alacritty -e nmtui-connect
 
-	## Bluetooth Connect
-	# set $bt alacritty --class 'bluetooth' -e ~/.config/sway/scripts/btconnect.sh
-	set $bluetooth "bash ~/.config/wofi/scripts/bluetooth/bluetooth.sh"
-
 	## Workspaces
 	set $next-workspace-move ~/.config/sway/scripts/next-workspace-move-container
 	set $prev-workspace-move ~/.config/sway/scripts/prev-workspace-move-container
@@ -52,7 +48,7 @@ include "colorschemes/default"
 ################################## Autostart ###########################
 
 	## Autotiling
-	exec autotiling-rs
+	exec autotiling
 
 	## Enable xwayland support
 	xwayland enable
@@ -97,8 +93,6 @@ include "colorschemes/default"
 	## Floating window
 	for_window [app_id="cmus"] floating enable
 	for_window [app_id="telegramdesktop"] floating enable
-	for_window [app_id="org.gnome.Nautilus"] floating enable
-	# for_window [class="feh"] floating enable
 	for_window [class="Spotify"] floating enable, resize set 1100 620
 	for_window [title="Firefox — Sharing Indicator"] floating enable
 
@@ -120,7 +114,7 @@ include "colorschemes/default"
 	client.focused_inactive   $base06  $base00   $base07  $base00    $base00
 
 	## Wallpaper
-	output * bg ~/Pictures/Wallpapers/16.jpg fill
+	output * bg ~/Pictures/Wallpapers/11.jpg fill
 
 ##################################### Config ###########################
 
@@ -199,9 +193,6 @@ include "colorschemes/default"
 
 	## NM TUI Connect
 	bindsym $mod+n exec $connect
-
-	## BT Connect
-	bindsym $mod+b exec $bluetooth
 
 	## Move windows to next/prev workspaces
 	bindsym $mod+Ctrl+right exec $next-workspace-move 
