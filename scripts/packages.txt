@@ -10,6 +10,7 @@ bluez
 bluez-utils
 brightnessctl
 btop
+cmus
 dunst
 efibootmgr
 fakeroot
@@ -24,6 +25,7 @@ gawk
 gcc
 gettext
 git
+git-delta
 github-cli
 gnome-keyring
 grep
@@ -36,6 +38,8 @@ gvfs-mtp
 gzip
 inter-font
 iwd
+jdk11-openjdk
+jq
 libgnome-keyring
 libmad
 libpipewire02
@@ -87,8 +91,11 @@ telegram-desktop
 texinfo
 ttf-dejavu
 ttf-fira-code
+ttf-ionicons
+ttf-ubuntu-font-family
 unzip
 vi
+vsftpd
 vulkan-radeon
 waybar
 wget
@@ -100,4 +107,5 @@ xdg-desktop-portal-wlr
 xdg-utils
 xf86-video-amdgpu
 xorg-xwayland
+zathura
 zsh
