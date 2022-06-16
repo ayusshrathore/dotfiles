@@ -13,11 +13,9 @@ echo "======> Installing AUR Packages"
 echo
 yay -Y --devel --combinedupgrade --batchinstall --nodiffmenu --save
 yay -S \
-	autotiling-rs \
 	google-chrome \
 	nerd-fonts-jetbrains-mono \
 	ponymix \
-	spotify \
 	ttf-font-logos \
 	ttf-icomoon-feather \
 	ttf-material-design-icons-git \

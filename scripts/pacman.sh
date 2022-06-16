@@ -10,3 +10,6 @@ echo "======> Installing Official Packages"
 echo
 
 pacman -Sy --needed $(<packages.txt)
+
+# Autotiling for sway
+cp -fv bin/autotiling /bin/

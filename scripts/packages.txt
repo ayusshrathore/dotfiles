@@ -71,7 +71,6 @@ patch
 pavucontrol
 pipewire
 pipewire-alsa
-pipewire-media-session
 pipewire-pulse
 pkgconf
 playerctl
@@ -85,6 +84,7 @@ starship
 startup-notification
 sudo
 sway
+swaybg
 swayidle
 swaylock
 telegram-desktop
