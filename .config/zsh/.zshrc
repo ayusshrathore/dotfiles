@@ -8,6 +8,7 @@ neofetch
 source ~/.config/zsh/zsh-auto/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/fzf-tab/fzf-tab.plugin.zsh
+source ~/.config/zsh/sudo/sudo.plugin.zsh
 
 # Source Other files
 source ~/.config/zsh/functions
@@ -94,3 +95,7 @@ alias \
 	btoff='bluetoothctl power off' \
 	btls='bluetoothctl devices' \
 	btcon='bluetoothctl connect' 
+
+alias bf="~/.config/sway/scripts/btconnect.sh"
+
+alias spdl="spotifydl --oo"

@@ -3,6 +3,7 @@ export TERMINAL=alacritty
 export BROWSER=firefox
 export EDITOR=micro
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME=Dracula
 
 # XDG base directory
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -36,3 +37,5 @@ export MICRO_TRUECOLOR=1
 # Spicetify
 export SPICETIFY_INSTALL="/home/freaker/.spicetify"
 export PATH="$PATH:/home/freaker/.spicetify"
+
+export WLR_DRM_NO_MODIFIERS=1
